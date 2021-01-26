@@ -1,16 +1,10 @@
 function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
-
-var displayText = [
-    "a Python nerd",
-    "in UW Mechatronics",
-    "dating a nerd"
-]
-
-var count = 1;
 var tag;
 
+var displayText;
+var count = 1;
 async function typing(){
     var len = tag.innerHTML.length;
     while(tag.innerHTML.length != 0){
@@ -43,7 +37,8 @@ async function flashing(){
 }
 
 document.addEventListener("DOMContentLoaded", async() => {
-    tag = document.getElementsByTagName('strong')[0];
+    tag = document.getElementsByClassName('display-text')[0];
+    displayText = JSON.parse(tag.getAttribute('display-text'));
     cursor = document.getElementsByClassName('cursor')[0];
     tag.innerHTML = displayText[0];
     setTimeout(flashing, 1000)
