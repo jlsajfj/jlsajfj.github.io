@@ -33,12 +33,12 @@ async function typing(){
 var cursor
 async function flashing(){
     for(var i = 0; i < 3; i++){
-        await sleep(500);
+        await sleep(250);
         cursor.style.opacity = 0;
         await sleep(500);
         cursor.style.opacity = 1;
+        await sleep(250);
     }
-    await sleep(250);
     typing()
 }
 
