@@ -226,13 +226,18 @@ input, select, textarea {
 		transform: translate3d(0,0,0);
 	/* Set your background with this */
 
-		background: #348cb2 url("images/bg.jpg") bottom left;
+		background: #9d402e url("images/bg.jpg") bottom left;
 		background-repeat: repeat-x;
 		height: 100%;
 		left: 0;
 		opacity: 1;
 		position: fixed;
 		top: 0;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px); 
+        filter: blur(5px);
 	}
 
 	@-moz-keyframes bg {
@@ -888,7 +893,8 @@ input, select, textarea {
 		#bg {
 			background-size: 750px auto;
 			width: 2250px;
-		} }
+		}
+    }
 
 /* Mobile */
 

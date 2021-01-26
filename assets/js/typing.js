@@ -36,10 +36,12 @@ async function flashing(){
     typing()
 }
 
-document.addEventListener("DOMContentLoaded", async() => {
-    tag = document.getElementsByClassName('display-text')[0];
+async function startup(){
+    tag = document.getElementsByClassName('carousel')[0];
     displayText = JSON.parse(tag.getAttribute('display-text'));
     cursor = document.getElementsByClassName('cursor')[0];
     tag.innerHTML = displayText[0];
-    setTimeout(flashing, 1000)
-});
+    setTimeout(flashing, 2000)
+}
+
+document.addEventListener("DOMContentLoaded", startup);
