@@ -26,11 +26,25 @@ async function typing(){
     
     count++;
     count = count % displayText.length;
-    setTimeout(typing, 4000);
+    
+    flashing()
+}
+
+var cursor
+async function flashing(){
+    for(var i = 0; i < 3; i++){
+        await sleep(500);
+        cursor.style.opacity = 0;
+        await sleep(500);
+        cursor.style.opacity = 1;
+    }
+    await sleep(250);
+    typing()
 }
 
 document.addEventListener("DOMContentLoaded", async() => {
     tag = document.getElementsByTagName('strong')[0];
+    cursor = document.getElementsByClassName('cursor')[0];
     tag.innerHTML = displayText[0];
-    setTimeout(typing, 4500);
+    setTimeout(flashing, 1000)
 });
