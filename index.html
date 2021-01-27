@@ -50,9 +50,17 @@
                 Particles.init({
                     selector: '.background-particles',
                     color: ['#485C5D', '#814837'],
-                    maxParticles: 200,
+                    maxParticles: 150,
                     connectParticles: true,
-                    sizeVariations: 0
+                    sizeVariations: 0,
+                    responsive: [{
+                        breakpoint: 800,
+                        options: {
+                            color: '#485C5D',
+                            maxParticles: 50,
+                            connectParticles: false
+                        }
+                    }]
                 });
             }
 			window.ontouchmove = function() { return false; }
