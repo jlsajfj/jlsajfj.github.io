@@ -33,6 +33,7 @@ async function flashing(){
         cursor.style.opacity = 1;
         await sleep(250);
     }
+    cursor.style.opacity = 0.75;
     typing()
 }
 
