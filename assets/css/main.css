@@ -85,6 +85,8 @@ input, select, textarea {
 	body {
 		background: #fff;
 		overflow: hidden;
+        margin: 0;
+        padding: 0;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -97,6 +99,14 @@ input, select, textarea {
 			-ms-transition: none !important;
 			transition: none !important;
 		}
+
+    .background-particles {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
 
 	body, input, select, textarea {
 		color: #fff;
@@ -1085,3 +1095,4 @@ input, select, textarea {
 		#header nav {
 			padding: 0 1em;
 		} }
+        

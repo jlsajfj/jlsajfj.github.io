@@ -14,9 +14,12 @@
 	</head>
 	<body class="is-preload">
 		<div id="wrapper">
+        
 			<div id="bg"></div>
 			<div id="overlay"></div>
 			<div id="main">
+            
+            <canvas class="background-particles"></canvas>
 
 				<!-- Header -->
 					<header id="header">
@@ -24,11 +27,11 @@
 						<p>I'm <strong class="carousel" display-text='["seeking internships", "a Python nerd", "in UW Mechatronics", "dating a nerd", "learning AI/ML"]'></strong><span class="cursor">|</span></p>
 						<nav>
 							<ul>
-								<li><a href="#about" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="https://github.com/jlsajfj" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="#" target="_blank"class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.linkedin.com/in/josephma293/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/jlsajfj" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="mailto:j293ma@uwaterloo.ca" target="_blank" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+								<li><a href="https://open.spotify.com/user/jlsajfj" target="_blank" class="icon brands fa-spotify"><span class="label">Spotify</span></a></li>
 							</ul>
 						</nav>
 					</header>
@@ -40,11 +43,22 @@
 
 			</div>
 		</div>
+        
 		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.onload = function() {
+                document.body.classList.remove('is-preload');
+                Particles.init({
+                    selector: '.background-particles',
+                    color: ['#485C5D', '#814837'],
+                    maxParticles: 200,
+                    connectParticles: true,
+                    sizeVariations: 0
+                });
+            }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
 		</script>
+        <script src="assets/js/particles.min.js"></script>
         <script src="assets/js/typing.js"></script>
 	</body>
 </html>

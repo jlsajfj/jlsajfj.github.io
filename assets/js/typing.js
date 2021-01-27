@@ -26,6 +26,7 @@ async function typing(){
 
 var cursor
 async function flashing(){
+    cursor.style.opacity = 1;
     for(var i = 0; i < 3; i++){
         await sleep(250);
         cursor.style.opacity = 0;
