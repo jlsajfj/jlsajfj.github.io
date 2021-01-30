@@ -11,7 +11,7 @@ async function typing(){
         tag.innerHTML = tag.innerHTML.substring(0, tag.innerHTML.length-1);
         await sleep(50);
     }
-    
+
     len = displayText[count].length
     for (var i = 0; i < displayText[count].length; i++) {
         tag.innerHTML += displayText[count][i];
