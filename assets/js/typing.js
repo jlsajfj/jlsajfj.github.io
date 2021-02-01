@@ -38,7 +38,7 @@ async function flashing(){
     typing()
 }
 
-async function startup(){
+function startup(){
     tag = document.getElementsByClassName('carousel')[0];
     displayText = JSON.parse(tag.getAttribute('display-text'));
     cursor = document.getElementsByClassName('cursor')[0];
